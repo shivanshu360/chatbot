@@ -96,7 +96,7 @@ function handlechatResponse(userMessage) {
     isGenerating = true; 
 
     user.message = userMessage
-    let html = `<img src="user.png" alt="" id="userImage" width="8%">
+    let html = `<img src="user.png" alt="" class="userImage" width="8%">
 <div class="user-chat-area">
 ${user.message}
 ${user.file.data ? `<img src="data:${user.file.mime_type};base64,${user.file.data}" class="chooseimg" />` : ""}
@@ -108,7 +108,7 @@ ${user.file.data ? `<img src="data:${user.file.mime_type};base64,${user.file.dat
     chatContainer.scrollTo({ top: chatContainer.scrollHeight, behavior: "smooth" })
 
     setTimeout(() => {
-        let html = `<img src="ai.png" alt="" id="aiImage" width="10%">
+        let html = `<img src="ai.png" alt="" class="aiImage" width="10%">
     <div class="ai-chat-area">
     <img src="loading.webp" alt="" class="load" width="50px">
     </div>`
